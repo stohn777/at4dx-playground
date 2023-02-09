@@ -1,4 +1,4 @@
-public inherited sharing class DEV_WidgetsSelector
+public virtual inherited sharing class DEV_WidgetsSelector
 	extends ApplicationSObjectSelector
 	implements DEV_IWidgetsSelector
 {
@@ -12,7 +12,7 @@ public inherited sharing class DEV_WidgetsSelector
 		return DEV_Widget__c.SObjectType;
 	}
 
-	public override List<Schema.SObjectField> getSObjectFieldList()
+	public override virtual List<Schema.SObjectField> getSObjectFieldList()
 	{
 		return new List<Schema.SObjectField> {
 			DEV_Widget__c.Id,
@@ -28,7 +28,7 @@ public inherited sharing class DEV_WidgetsSelector
 		};
 	}
 
-	private List<Schema.SObjectField> getAdditionalSObjectFieldList()
+	protected virtual List<Schema.SObjectField> getAdditionalSObjectFieldList()
 	{
 		return new List<Schema.SObjectField>
 		{
