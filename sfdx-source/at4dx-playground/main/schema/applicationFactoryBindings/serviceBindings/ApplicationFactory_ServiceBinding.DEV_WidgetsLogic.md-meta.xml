@@ -7,6 +7,10 @@
         <value xsi:type="xsd:string">DEV_IWidgetsLogic</value>
     </values>
     <values>
+        <field>Priority__c</field>
+        <value xsi:type="xsd:integer">100</value>
+    </values>
+    <values>
         <field>To__c</field>
         <value xsi:type="xsd:string">DEV_WidgetsLogic</value>
     </values>
