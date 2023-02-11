@@ -1,4 +1,4 @@
-public inherited sharing class DEV_WidgetsSelector
+public virtual inherited sharing class DEV_WidgetsSelector
 	extends ApplicationSObjectSelector
 	implements DEV_IWidgetsSelector
 {
@@ -7,12 +7,12 @@ public inherited sharing class DEV_WidgetsSelector
 		return (DEV_IWidgetsSelector) Application.Selector.newInstance(DEV_Widget__c.SObjectType);
 	}
 
-	public SObjectType getSObjectType()
+	public virtual SObjectType getSObjectType()
 	{
 		return DEV_Widget__c.SObjectType;
 	}
 
-	public override List<Schema.SObjectField> getSObjectFieldList()
+	public override virtual List<Schema.SObjectField> getSObjectFieldList()
 	{
 		return new List<Schema.SObjectField> {
 			DEV_Widget__c.Id,
@@ -28,7 +28,7 @@ public inherited sharing class DEV_WidgetsSelector
 		};
 	}
 
-	private List<Schema.SObjectField> getAdditionalSObjectFieldList()
+	private virtual List<Schema.SObjectField> getAdditionalSObjectFieldList()
 	{
 		return new List<Schema.SObjectField>
 		{
@@ -36,12 +36,12 @@ public inherited sharing class DEV_WidgetsSelector
 		};
 	}
 
-	public List<DEV_Widget__c> selectById(Set<Id> idSet)
+	public virtual List<DEV_Widget__c> selectById(Set<Id> idSet)
 	{
 		return (List<DEV_Widget__c>) selectSObjectsById( idSet == null ? new Set<Id>() : idSet );
 	}
 
-	public List<DEV_Widget__c> selectByMixedArguments(Set<String> guidSetA, Set<String> guidSetB, Set<DEV_WidgetEnums.StateEnum> enumSet)
+	public virtual List<DEV_Widget__c> selectByMixedArguments(Set<String> guidSetA, Set<String> guidSetB, Set<DEV_WidgetEnums.StateEnum> enumSet)
 	{
 		return null;
 	}
