@@ -9,4 +9,4 @@
 	url = https://github.com/apex-enterprise-patterns/force-di.git
 [submodule "sfdx-source-dependencies/at4dx"]
 	path = sfdx-source-dependencies/at4dx
-	url = https://github.com/apex-enterprise-patterns/at4dx.git
+	url = https://github.com/apex-enterprise-patterns/at4dx
